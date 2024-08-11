@@ -1,0 +1,65 @@
+/* 
+### TIMID0x - 2023-08-07T10:39:45.000-05:00
+*/
+
+:root {
+    --bs-dark: #212529;
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-bg-opacity: 1;
+}
+
+
+body {
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+}
+
+/*
+ * Extra utilities
+ */
+
+
+
+/*Cursiva en footer*/
+.h1font {
+    font-family: 'Kalam', cursive;
+}
+
+
+/* CIRCLE AVATAR */
+.circle-singleline {
+    font-size: 1.2rem;
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 50%;
+    background: darkorange;
+    color: #fff;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.avatar {
+
+    position: relative;
+    display: inline-block;
+
+}
+
+/* Scroll */
+.w3-animate-fading {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
