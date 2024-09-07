@@ -83,4 +83,18 @@ trait ColumnConfiguration
     {
         $this->displayColumnLabel = $status;
     }
+
+    public function setHasTableRowUrl(bool $hasTableRowUrl): self
+    {
+        $this->hasTableRowUrl = $hasTableRowUrl;
+
+        return $this;
+    }
+
+    public function setIsReorderColumn(bool $isReorderColumn): self
+    {
+        $this->isReorderColumn = $isReorderColumn;
+
+        return $this;
+    }
 }

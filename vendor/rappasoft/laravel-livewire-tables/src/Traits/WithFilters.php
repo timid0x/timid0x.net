@@ -4,6 +4,8 @@ namespace Rappasoft\LaravelLivewireTables\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
+use Livewire\Attributes\Locked;
+use Rappasoft\LaravelLivewireTables\Events\FilterApplied;
 use Rappasoft\LaravelLivewireTables\Traits\Configuration\FilterConfiguration;
 use Rappasoft\LaravelLivewireTables\Traits\Helpers\FilterHelpers;
 
@@ -12,25 +14,33 @@ trait WithFilters
     use FilterConfiguration,
         FilterHelpers;
 
+    #[Locked]
     public bool $filtersStatus = true;
 
+    #[Locked]
     public bool $filtersVisibilityStatus = true;
 
+    #[Locked]
     public bool $filterPillsStatus = true;
 
+    // Entangled in JS
     public bool $filterSlideDownDefaultVisible = false;
 
+    #[Locked]
     public string $filterLayout = 'popover';
 
+    #[Locked]
     public int $filterCount;
 
-    protected ?Collection $filterCollection;
-
+    // Set in JS
     public array $filterComponents = [];
 
+    // Set in Frontend
     public array $appliedFilters = [];
 
     public array $filterGenericData = [];
+
+    protected ?Collection $filterCollection;
 
     public function filters(): array
     {
@@ -68,6 +78,7 @@ trait WithFilters
                     }
                 }
             }
+            $this->storeFilterValues();
         }
 
         return $this->getBuilder();
@@ -94,7 +105,12 @@ trait WithFilters
         } elseif ($filter) {
             $this->callHook('filterUpdated', ['filter' => $filter->getKey(), 'value' => $value]);
             $this->callTraitHook('filterUpdated', ['filter' => $filter->getKey(), 'value' => $value]);
+            if ($this->getEventStatusFilterApplied() && $filter->getKey() != null && $value != null) {
+                event(new FilterApplied($this->getTableName(), $filter->getKey(), $value));
+            }
+            $this->dispatch('filter-was-set', tableName: $this->getTableName(), filterKey: $filter->getKey(), value: $value);
 
         }
+
     }
 }

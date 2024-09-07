@@ -85,8 +85,9 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="/blog">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="/friendcode">Friend codes</a></li>
-			<li class="nav-item"><a class="nav-link" aria-current="page" href="/shop">Shop</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="/friendcode">Friend codes</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="/shop">Shop</a></li>
 
                         {{-- Dropdown Icon --}}
                         @auth
@@ -130,8 +131,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-4 text-lg-start text-white">
                     <small>&copy;
-                            {{ date('Y') }} - Join our
-                            social networks at <span class="h1font">&#64;timid0x</span></small>
+                        {{ date('Y') }} - Join our
+                        social networks at <span class="h1font">&#64;timid0x</span></small>
                 </div>
                 <div class="col-lg-4 my-1 my-lg-0">
                     <a class="btn btn-dark btn-social mx-1 text-white" href="https://twitter.com/timid0x"
@@ -148,10 +149,10 @@
                 </div>
                 <div class="col-lg-4 text-lg-end">
                     <p><small><a class="link-secondary text-decoration-none text-gray"
-                        href="{{ url('/privacy') }}">Privacy
-                        policy &
-                        Terms of use</a></small></p>
-                    
+                                href="{{ url('/privacy') }}">Privacy
+                                policy &
+                                Terms of use</a></small></p>
+
 
                 </div>
             </div>
@@ -163,8 +164,8 @@
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
     <!-- BS-->
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-        <!-- BS-->
-        <script src="{{ asset('assets/js/imagebox.min.js') }}"></script>
+    <!-- BS-->
+    <script src="{{ asset('assets/js/imagebox.min.js') }}"></script>
 
     <!-- Yield Scripts Footer-->
     @yield('scripts-footer')

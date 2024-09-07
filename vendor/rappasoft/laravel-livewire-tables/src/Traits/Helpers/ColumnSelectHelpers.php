@@ -3,6 +3,7 @@
 namespace Rappasoft\LaravelLivewireTables\Traits\Helpers;
 
 use Illuminate\Support\Collection;
+use Livewire\Attributes\Computed;
 use Rappasoft\LaravelLivewireTables\Events\ColumnsSelected;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 
@@ -23,34 +24,9 @@ trait ColumnSelectHelpers
         return $this->getColumnSelectStatus() === false;
     }
 
-    public function getRememberColumnSelectionStatus(): bool
-    {
-        return $this->rememberColumnSelectionStatus;
-    }
-
-    public function rememberColumnSelectionIsEnabled(): bool
-    {
-        return $this->getRememberColumnSelectionStatus() === true;
-    }
-
-    public function rememberColumnSelectionIsDisabled(): bool
-    {
-        return $this->getRememberColumnSelectionStatus() === false;
-    }
-
     public function columnSelectIsEnabledForColumn(mixed $column): bool
     {
         return in_array($column instanceof Column ? $column->getSlug() : $column, $this->selectedColumns, true);
-    }
-
-    protected function forgetColumnSelectSession(): void
-    {
-        session()->forget($this->getColumnSelectSessionKey());
-    }
-
-    protected function getColumnSelectSessionKey(): string
-    {
-        return $this->getDataTableFingerprint().'-columnSelectEnabled';
     }
 
     public function getColumnSelectIsHiddenOnTablet(): bool
@@ -85,11 +61,7 @@ trait ColumnSelectHelpers
             ->values();
     }
 
-    public function getCurrentlySelectedCols(): void
-    {
-        $this->defaultVisibleColumnCount = count($this->getDefaultVisibleColumns());
-        $this->visibleColumnCount = count(array_intersect($this->selectedColumns, $this->getDefaultVisibleColumns()));
-    }
+    public function getCurrentlySelectedCols(): void {}
 
     public function getUnSelectableColumns(): Collection
     {
@@ -141,6 +113,16 @@ trait ColumnSelectHelpers
     public function getAllColumnsAreSelected(): bool
     {
         return $this->getSelectableSelectedColumns()->count() === $this->getSelectableColumns()->count();
+    }
+
+    #[Computed]
+    public function selectedVisibleColumns(): array
+    {
+        return $this->getColumns()
+            ->reject(fn (Column $column) => $column->isHidden())
+            ->reject(fn (Column $column) => ($column->isSelectable() && ! $this->columnSelectIsEnabledForColumn($column)))
+            ->values()
+            ->toArray();
     }
 
     public function getVisibleColumns(): array
@@ -198,26 +180,24 @@ trait ColumnSelectHelpers
         }
         $this->setupFirstColumnSelectRun();
 
-        $this->defaultVisibleColumnCount = count($this->selectableColumns);
-
         // If remember selection is off, then clear the session
-        if ($this->rememberColumnSelectionIsDisabled()) {
+        if (! $this->shouldStoreColumnSelectInSession()) {
             $this->forgetColumnSelectSession();
         }
 
         // Set to either the default set or what is stored in the session
-        $this->selectedColumns = (count($this->selectedColumns) > 1) ?
+        $selectedColumns = (count($this->selectedColumns) > 1) ?
             $this->selectedColumns :
             session()->get($this->getColumnSelectSessionKey(), $this->getDefaultVisibleColumns());
 
         // Check to see if there are any excluded that are already stored in the enabled and remove them
         foreach ($this->getColumns() as $column) {
-            if (! $column->isSelectable() && ! in_array($column->getSlug(), $this->selectedColumns, true)) {
-                $this->selectedColumns[] = $column->getSlug();
-                session([$this->getColumnSelectSessionKey() => $this->selectedColumns]);
+            if (! $column->isSelectable() && ! in_array($column->getSlug(), $selectedColumns, true)) {
+                $selectedColumns[] = $column->getSlug();
             }
         }
-        $this->visibleColumnCount = count($this->selectedColumns);
+        $this->selectedColumns = $selectedColumns;
+        // $this->storeColumnSelectValues();
     }
 
     protected function setupFirstColumnSelectRun(): void

@@ -1,11 +1,10 @@
 @aware(['component', 'tableName','isTailwind','isBootstrap'])
-@props(['rows'])
 
-@if ($component->bulkActionsAreEnabled() && $component->hasBulkActions())
+@if ($this->bulkActionsAreEnabled() && $this->hasBulkActions())
     @php
-        $colspan = $component->getColspanCount();
-        $selectAll = $component->selectAllIsEnabled();
-        $simplePagination = $component->isPaginationMethod('simple');
+        $colspan = $this->getColspanCount();
+        $selectAll = $this->selectAllIsEnabled();
+        $simplePagination = $this->isPaginationMethod('simple');
     @endphp
 
     @if ($isTailwind)
@@ -98,7 +97,7 @@
                     </div>
                 </template>
 
-                <<template x-if="selectedItems.length !== paginationTotalItemCount && !selectAllStatus">
+                <template x-if="selectedItems.length !== paginationTotalItemCount && !selectAllStatus">
                     <div wire:key="{{ $tableName }}-some-selected">
                         <span>
                             @lang('You have selected')

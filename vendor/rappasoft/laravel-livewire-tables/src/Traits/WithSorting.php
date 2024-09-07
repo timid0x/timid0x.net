@@ -4,6 +4,7 @@ namespace Rappasoft\LaravelLivewireTables\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
+use Livewire\Attributes\Locked;
 use Rappasoft\LaravelLivewireTables\Traits\Configuration\SortingConfiguration;
 use Rappasoft\LaravelLivewireTables\Traits\Helpers\SortingHelpers;
 
@@ -30,7 +31,7 @@ trait WithSorting
 
     public string $defaultSortingLabelDesc = 'Z-A';
 
-    protected function queryStringWithSorting(): array
+    public function queryStringWithSorting(): array
     {
         if ($this->queryStringIsEnabled() && $this->sortingIsEnabled()) {
             return [

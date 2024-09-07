@@ -2,6 +2,90 @@
 
 All notable changes to `laravel-livewire-tables` will be documented in this file
 
+## [v3.4.17] - 2024-09-01
+### New Features
+- Add hide table option by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1914
+- Add column select session methods by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1913
+- Save filter selection to session (BETA) by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1910
+
+### Tweaks
+- Use Core Attribute Bag by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1916
+- Use Core HasTheme Methods by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1915
+
+## [v3.4.16] - 2024-08-27
+### New Features
+- Add icon column by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1902
+- Enable/Disable Tools/Toolbar by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1896
+
+### Bug Fixes
+- Fix has actions by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1901
+- Use Computed Properties By Default by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1898
+
+### Tweaks
+- PHPStan - Config File Update and Baseline by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1903
+
+## [v3.4.15] - 2024-08-25
+### New Features
+- BooleanColumn - Toggleable Callback by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1892
+
+### Tweaks
+- Doc Type Fixes by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1891
+
+## [v3.4.14] - 2024-08-25
+### New Features
+- Set Action Position (Left/Center/Right) and Set Actions in Toolbar by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1889
+
+## [v3.4.13] - 2024-08-25
+### Bug Fixes
+- Fix for Action Button with no icon by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1887
+
+### Docs
+- Add a Recommended Approach document by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1886
+- Reorder the "Getting Started" docs by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1884
+
+## [v3.4.12] - 2024-08-23
+### Tweaks
+- Adjust Action Button Margins by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1880
+
+## [v3.4.11] - 2024-08-23
+### New Features
+- Add setIconLeft/setIconRight for Actions by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1877
+
+## [v3.4.10] - 2024-08-23
+### Bug Fixes
+- Default UseComputedProperties to True to default to new views by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1873
+- Allow Single Date DateRangeFilter by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1872
+- Allow clearing of DateRangeFilter by Text Box by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1875
+
+### Docs
+- Docs Update by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1876
+
+## [v3.4.9] - 2024-08-21
+### Bug Fixes
+- Default UseComputedProperties to False to allow previously published views to work by default by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1869
+- Fix superfluous bulk actions tr > by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1868
+
+## [v3.4.8] - 2024-08-18
+### New Features
+- Add an event dispatch for Filter Was Set when filterComponents is updated by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1861
+
+## [v3.4.7] - 2024-08-18
+### Bug Fixes
+- Correct a locked property that is entangled in js, and add comments around some key properties to prevent reoccurrence by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1859
+
+## [v3.4.6] - 2024-08-15
+### New Features
+- Column Features - deselectedIf/selectedIf by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1846
+- Add setTrimSearchStringEnabled/setTrimSearchStringDisabled by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1843
+
+### Bug Fixes
+- Restore the original JS methods for users with published views by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1848
+
+### Tweaks
+- Remove Component from Column, move getRows into ComputedProperty by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1838
+- Clean up filter generic data by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1837
+- Further work to clean up Blades, and use Computed Properties by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1850
+
 ## [v3.4.5] - 2024-08-10
 ### Bug Fixes
 - Fix sort queryString bug by @lrljoe in https://github.com/rappasoft/laravel-livewire-tables/pull/1835

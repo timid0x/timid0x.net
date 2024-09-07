@@ -1,9 +1,13 @@
+@push('css')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tobiasroeder/imagebox@1.3.2/dist/imagebox.min.css">
+@endpush
+
 <x-container class="px-4 my-4">
     <div class="grid md:grid-cols-2 gap-6">
         <div class="col-span-1">
             <figure class="mb-2">
                 <img src="{{ $product->image }}" alt="{{ $product->name }}"
-                    class="w-full aspect-auto object-cover object-center" />
+                    class="w-full aspect-auto object-cover object-center" alt="" data-imagebox="" />
             </figure>
 
             <div class="grid grid-cols-3 gap-4">
@@ -11,8 +15,9 @@
                 @foreach ($product->producto_imagenes()->get() as $item)
                     {{-- @dump($item) --}}
                     <div>
-                        <img class="h-auto max-w-full rounded-lg" src="{{ asset('storage/' . $item->image_path) }}" alt="">
-                        
+                        <img class="h-auto max-w-full rounded-lg" src="{{ asset('storage/' . $item->image_path) }}"
+                            alt="" data-imagebox="">
+
                     </div>
                 @endforeach
 
@@ -98,3 +103,7 @@
         </div>
 
 </x-container>
+@push('js')
+    <script src="https://cdn.jsdelivr.net/gh/tobiasroeder/imagebox@1.3.2/dist/imagebox.min.js"></script>
+@endpush
+

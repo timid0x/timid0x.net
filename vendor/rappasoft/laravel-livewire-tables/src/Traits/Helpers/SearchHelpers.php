@@ -123,7 +123,11 @@ trait SearchHelpers
 
     public function getSearchPlaceholder(): string
     {
-        return $this->hasSearchPlaceholder() ? $this->searchPlaceholder : __('Search');
+        if ($this->hasSearchPlaceholder()) {
+            return $this->searchPlaceholder;
+        }
+
+        return __('Search');
     }
 
     public function hasSearchPlaceholder(): bool
@@ -134,5 +138,10 @@ trait SearchHelpers
     public function getSearchFieldAttributes(): array
     {
         return count($this->searchFieldAttributes) ? $this->searchFieldAttributes : ['default' => true];
+    }
+
+    public function shouldTrimSearchString(): bool
+    {
+        return $this->trimSearchString ?? false;
     }
 }

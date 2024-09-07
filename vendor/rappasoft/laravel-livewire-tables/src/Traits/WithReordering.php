@@ -2,6 +2,7 @@
 
 namespace Rappasoft\LaravelLivewireTables\Traits;
 
+use Livewire\Attributes\Locked;
 use Rappasoft\LaravelLivewireTables\Traits\Configuration\ReorderingConfiguration;
 use Rappasoft\LaravelLivewireTables\Traits\Helpers\ReorderingHelpers;
 
@@ -10,21 +11,26 @@ trait WithReordering
     use ReorderingConfiguration,
         ReorderingHelpers;
 
+    // Entangled in JS
     public bool $reorderStatus = false;
 
+    // Entangled in JS
     public bool $currentlyReorderingStatus = false;
 
+    // Entangled in JS
     public bool $hideReorderColumnUnlessReorderingStatus = false;
 
+    // Entangled in JS
     public bool $reorderDisplayColumn = false;
 
-    public string $reorderMethod = 'reorder';
-
+    // Retrieved in JS
     public string $defaultReorderColumn = 'sort';
 
-    public string $defaultReorderDirection = 'asc';
-
     public array $orderedItems = [];
+
+    protected string $reorderMethod = 'reorder';
+
+    protected string $defaultReorderDirection = 'asc';
 
     protected array $reorderThAttributes = ['default' => true];
 
