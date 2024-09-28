@@ -32,7 +32,6 @@
                 {{ $product->name }}
             </h1>
 
-
             <div class="flex items-center space-x-2 mb-4">
                 <ul class="flex space-x-2 text-sm">
                     <li>
