@@ -286,7 +286,7 @@
         {{-- Pagination --}}
 
 
-        @if (!isset($code))
+        @if (isset($codes))
             <div class="d-flex justify-content-center">
             </div>
 
