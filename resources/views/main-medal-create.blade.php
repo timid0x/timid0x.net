@@ -1,5 +1,5 @@
 <!--
-### TIMID0x - 20240803
+### TIMID0x - 20241214
 -->
 @extends('layouts.template-core')
 
@@ -1534,7 +1534,7 @@
         </div>
         </div>
 
-        
+
 
         {{-- Kalos --}}
         <div class="col d-flex align-items-stretch">
@@ -2068,7 +2068,7 @@
                                     <div class="card-header platinum-medal">
                 @endif
                 <img class="img-fluid" src="{{ asset('assets/images/FriendFinder_Platinum.png') }}"
-                    alt="Frind Finder" width="50" height="50">
+                    alt="Friend Finder" width="50" height="50">
                 <div class="fw-bold"><span style="margin-left: 2px;">{{ __('Friend Finder') }}</span></div>
             </div>
             <div class="card-body border-0">
@@ -2095,6 +2095,51 @@
             </div>
         </div>
         </div>
+
+
+        {{-- Live Party --}}
+        <div class="col d-flex align-items-stretch">
+            <div class="card" style="max-width: 12rem;">
+                @if ($medals === null)
+                    <div class="card-header bronze-medal">
+                    @elseif ($medals->live_party < 10)
+                        <div class="card-header bronze-medal">
+                        @elseif ($medals->live_party >= 10 && $medals->live_party < 50)
+                            <div class="card-header silver-medal">
+                            @elseif ($medals->live_party >= 50 && $medals->live_party < 100)
+                                <div class="card-header gold-medal">
+                                @else
+                                    <div class="card-header platinum-medal">
+                @endif
+                <img class="img-fluid" src="{{ asset('assets/images/LiveoftheParty_Platinum.webp') }}"
+                    alt="Live Party" width="50" height="50">
+                <div class="fw-bold"><span style="margin-left: 2px;">{{ __('Live of the Party') }}</span></div>
+            </div>
+            <div class="card-body border-0">
+                <p class="card-text">{{ __('Complete Party Challenges') }}</p>
+            </div>
+            <ul class="list-group list-group-flush border-0">
+                <li class="list-group-item">
+                    <input class="form-control form-control-sm @error('live_party') is-invalid @enderror"
+                        name="live_party" type="numeric" placeholder="0 000 000"
+                        value="{{ old('live_party') }}">
+                    @error('live_party')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </li>
+            </ul>
+            <div class="card-footer text-muted border-0">
+                @if ($medals === null)
+                    <small>{{ __('before') }}: 0</small>
+                @else
+                    <small>{{ __('before') }}: {{ $medals->friend_finder }}</small>
+                @endif
+            </div>
+        </div>
+        </div>
+
 
         {{-- Raid Expert --}}
         <div class="col d-flex align-items-stretch">
@@ -2553,6 +2598,9 @@
             reverse: true
         });
         $('input[name="friend_finder"]').mask('000 000 000 000 000', {
+            reverse: true
+        });
+        $('input[name="live_party"]').mask('000 000 000 000 000', {
             reverse: true
         });
         $('input[name="raid_expert"]').mask('000 000 000 000 000', {

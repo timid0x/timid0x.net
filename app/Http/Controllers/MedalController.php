@@ -143,6 +143,7 @@ class MedalController extends Controller
         $medals['showcase_star'] = Str::replace(' ', '', $medals['showcase_star']);
         $medals['paldea'] = Str::replace(' ', '', $medals['paldea']);
         $medals['expert_navigator'] = Str::replace(' ', '', $medals['expert_navigator']);
+        $medals['live_party'] = Str::replace(' ', '', $medals['live_party']);
 
         request()->replace($medals);
         //dd($medals );
@@ -206,6 +207,7 @@ class MedalController extends Controller
                 'showcase_star' => 0,
                 'paldea' => 0,
                 'expert_navigator' => 0,
+                'live_party' => 0,
 
 
             ]);
@@ -269,6 +271,7 @@ class MedalController extends Controller
             'showcase_star' => 'required|integer|min:' . $medals->showcase_star,
             'paldea' => 'required|integer|min:' . $medals->paldea,
             'expert_navigator' => 'required|integer|min:' . $medals->expert_navigator,
+            'live_party' => 'required|integer|min:' . $medals->live_party,
 
 
             'checkbox' => ['required', 'accepted'],
