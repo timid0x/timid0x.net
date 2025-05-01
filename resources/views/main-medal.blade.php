@@ -97,6 +97,7 @@
                             <th>{{ __('Showcase Star') }}</th>
                             <th>{{ __('Expert Navigator') }}</th>
                             <th>{{ __('Live of the Party') }}</th>
+                            <th>{{ __('Community Member') }}</th>
                             <th style="min-width:130px;">{{ __('Action') }}</th>
                         </tr>
                     </thead>
@@ -161,6 +162,7 @@
                                 <td>{{ number_format($medal->showcase_star, 0, '', ',') }}</td>
                                 <td>{{ number_format($medal->expert_navigator, 0, '', ',') }}</td>
                                 <td>{{ number_format($medal->live_party, 0, '', ',') }}</td>
+                                <td>{{ number_format($medal->community_member, 0, '', ',') }}</td>
 
 
                                 <td>

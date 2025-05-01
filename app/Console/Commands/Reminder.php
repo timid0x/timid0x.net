@@ -42,15 +42,21 @@ class Reminder extends Command
      */
     public function handle()
     {
-        $users = User::all();
+        // Fetch only users with subscription enabled
+        $users = User::where('subscription', true)->get();
 
+        if ($users->isEmpty()) {
+            Log::channel('stack')->info('No users with active subscription found.');
+            return 0;
+        }
 
         foreach ($users as $user) {
             Mail::to($user)->send(new Reminders($user));
         }
 
-	Log::channel('stack')->info('[' . Carbon::now() . '] RUN auto-reminder scheduler!');
-	Log::channel('slack')->info('🦇 RUN auto-reminder scheduler');
+        Log::channel('stack')->info('[' . Carbon::now() . '] RUN auto-reminder scheduler! Sent emails: ' . $users->count());
+        Log::channel('slack')->info('🦇 RUN auto-reminder scheduler. Sent emails: ' . $users->count());
+
         return 0;
     }
 }

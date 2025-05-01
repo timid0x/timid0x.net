@@ -2102,11 +2102,11 @@
             <div class="card" style="max-width: 12rem;">
                 @if ($medals === null)
                     <div class="card-header bronze-medal">
-                    @elseif ($medals->live_party < 10)
+                    @elseif ($medals->live_party < 50)
                         <div class="card-header bronze-medal">
-                        @elseif ($medals->live_party >= 10 && $medals->live_party < 50)
+                        @elseif ($medals->live_party >= 50 && $medals->live_party < 100)
                             <div class="card-header silver-medal">
-                            @elseif ($medals->live_party >= 50 && $medals->live_party < 100)
+                            @elseif ($medals->live_party >= 100 && $medals->live_party < 200)
                                 <div class="card-header gold-medal">
                                 @else
                                     <div class="card-header platinum-medal">
@@ -2134,7 +2134,7 @@
                 @if ($medals === null)
                     <small>{{ __('before') }}: 0</small>
                 @else
-                    <small>{{ __('before') }}: {{ $medals->friend_finder }}</small>
+                    <small>{{ __('before') }}: {{ $medals->live_party }}</small>
                 @endif
             </div>
         </div>
@@ -2358,6 +2358,50 @@
         </div>
         {{-- END CARD --}}
 
+
+        {{-- Community Member --}}
+        <div class="col d-flex align-items-stretch">
+            <div class="card" style="max-width: 12rem;">
+                @if ($medals === null)
+                    <div class="card-header bronze-medal">
+                    @elseif ($medals->community_member < 20)
+                        <div class="card-header bronze-medal">
+                        @elseif ($medals->community_member >= 20 && $medals->community_member < 50)
+                            <div class="card-header silver-medal">
+                            @elseif ($medals->community_member >= 50 && $medals->community_member < 100)
+                                <div class="card-header gold-medal">
+                                @else
+                                    <div class="card-header platinum-medal">
+                @endif
+                <img class="img-fluid" src="{{ asset('assets/images/CommunityMember_Platinum.webp') }}"
+                    alt="community_member" width="50" height="50">
+                <div class="fw-bold"><span style="margin-left: 2px;">{{ __('Community Member') }}</span></div>
+            </div>
+            <div class="card-body border-0">
+                <p class="card-text">{{ __('Check in to a Community Ambassador meetup') }}</p>
+            </div>
+            <ul class="list-group list-group-flush border-0">
+                <li class="list-group-item">
+                    <input class="form-control form-control-sm @error('community_member') is-invalid @enderror"
+                        name="community_member" type="numeric" placeholder="0 000 000"
+                        value="{{ old('community_member') }}">
+                    @error('community_member')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </li>
+            </ul>
+            <div class="card-footer text-muted border-0">
+                @if ($medals === null)
+                    <small>{{ __('before') }}: 0</small>
+                @else
+                    <small>{{ __('before') }}: {{ $medals->community_member }}</small>
+                @endif
+            </div>
+        </div>
+        </div>
+        {{-- END CARD --}}        
 
         {{-- Wayfarer --}}
         <div class="col d-flex align-items-stretch">
@@ -2601,6 +2645,9 @@
             reverse: true
         });
         $('input[name="live_party"]').mask('000 000 000 000 000', {
+            reverse: true
+        });
+        $('input[name="community_member"]').mask('000 000 000 000 000', {
             reverse: true
         });
         $('input[name="raid_expert"]').mask('000 000 000 000 000', {

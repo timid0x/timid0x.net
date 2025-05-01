@@ -144,6 +144,7 @@ class MedalController extends Controller
         $medals['paldea'] = Str::replace(' ', '', $medals['paldea']);
         $medals['expert_navigator'] = Str::replace(' ', '', $medals['expert_navigator']);
         $medals['live_party'] = Str::replace(' ', '', $medals['live_party']);
+        $medals['community_member'] = Str::replace(' ', '', $medals['community_member']);
 
         request()->replace($medals);
         //dd($medals );
@@ -208,6 +209,7 @@ class MedalController extends Controller
                 'paldea' => 0,
                 'expert_navigator' => 0,
                 'live_party' => 0,
+                'community_member' => 0,
 
 
             ]);
@@ -272,6 +274,7 @@ class MedalController extends Controller
             'paldea' => 'required|integer|min:' . $medals->paldea,
             'expert_navigator' => 'required|integer|min:' . $medals->expert_navigator,
             'live_party' => 'required|integer|min:' . $medals->live_party,
+            'community_member' => 'required|integer|min:' . $medals->community_member,
 
 
             'checkbox' => ['required', 'accepted'],
