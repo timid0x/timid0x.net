@@ -253,7 +253,7 @@
                                                             <div class="modal-body p-0">
                                                                 <div class="ratio ratio-16x9">
                                                                     <iframe id="staticPlayer"
-                                                                        src="https://www.youtube.com/embed/sKN-UlueJnc"
+                                                                        src="https://www.youtube.com/embed/WuBFnkVcwUE?si=K6-9jYeC09r6fuKD"
                                                                         title="YouTube video player" frameborder="0"
                                                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                                                         allowfullscreen></iframe>
