@@ -70,8 +70,6 @@
 
     @stack('js')
 
-    @stack('js')
-
     @if (session('swal'))
         <script>
             Swal.fire({!! json_encode(session('swal')) !!});

@@ -8,10 +8,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="title" content="TIMID0x: PokemonGO, TL50data and more">
+    <meta name="title" content="TIMID0x: PokemonGO, TL80data and more">
     <meta name="description"
-        content="Join TL50data and showcase your PokemonGO stats! Discover a new alternative to TL40data and level up your gaming experience. Try it now!">
-    <meta name="keywords" content="timid0x,TL50data,TL40Data,Pokemon,PokemonGO,AR,GOSnapshot,Blog">
+        content="Join TL80data and showcase your PokemonGO stats! Discover a new alternative to TL40data and level up your gaming experience. Try it now!">
+    <meta name="keywords" content="timid0x,TL80data,TL40Data,Pokemon,PokemonGO,AR,GOSnapshot,Blog">
     <meta name="wot-verification" content="b163ac58f42ae0b0f594" />
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -19,7 +19,7 @@
     <meta name="author" content="TIMID0x">
 
 
-    <title>TL50data - @yield('title')</title>
+    <title>TL80data - @yield('title')</title>
 
     <!-- Favicon-->
     <link rel="icon" type="image/png" href="{{ asset('assets/images/favicons/favicon.ico') }}">
@@ -134,7 +134,7 @@
             <a class="navbar-brand m-2" href="/">
                 <img src="{{ asset('assets/images/logo_n36bgc.png') }}" width="30" height="30"
                     class="img-fluid flash d-inline-block align-top" alt="">
-                TL50data
+                TL80data
             </a>
 
             <!-- Language Dropdown (Aligned to the Right) -->
@@ -236,7 +236,7 @@
                 <div class="offcanvas-md offcanvas-end bg-dark text-white" tabindex="-1" id="sidebarMenu"
                     aria-labelledby="sidebarMenuLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="sidebarMenuLabel">TL50data</h5>
+                        <h5 class="offcanvas-title" id="sidebarMenuLabel">TL80data</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                             data-bs-target="#sidebarMenu" aria-label="Close"></button>
                     </div>

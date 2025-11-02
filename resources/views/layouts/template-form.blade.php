@@ -7,10 +7,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="title" content="TIMID0x: PokemonGO, TL50Data and more">
+    <meta name="title" content="TIMID0x: PokemonGO, TL80Data and more">
     <meta name="description"
         content="Organize your data by month and never lose track again. Don't let the loss of #tl40data bring you down. We've got you covered.">
-    <meta name="keywords" content="timid0x,TL50data,TL40Data,Pokemon,PokemonGO,AR,GOSnapshot,Blog">
+    <meta name="keywords" content="timid0x,TL80data,TL40Data,Pokemon,PokemonGO,AR,GOSnapshot,Blog">
     <meta name="wot-verification" content="b163ac58f42ae0b0f594" />
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">

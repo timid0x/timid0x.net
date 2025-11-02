@@ -102,7 +102,7 @@
                             </li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/tl50data') }}">TL50data</a>
+                                <a class="nav-link" href="{{ url('/tl80data') }}">TL80data</a>
                             </li>
 
                         @endauth

@@ -1,5 +1,5 @@
 <!--
-### TIMID0x - 20241214
+### TIMID0x - 20250211
 -->
 @extends('layouts.template-core')
 
@@ -1669,11 +1669,11 @@
             <div class="card" style="max-width: 12rem;">
                 @if ($medals === null)
                     <div class="card-header bronze-medal">
-                    @elseif ($medals->paldea < 25)
+                    @elseif ($medals->paldea < 30)
                         <div class="card-header bronze-medal">
-                        @elseif ($medals->paldea >= 25 && $medals->paldea < 50)
+                        @elseif ($medals->paldea >= 30 && $medals->paldea < 80)
                             <div class="card-header silver-medal">
-                            @elseif ($medals->paldea >= 50 && $medals->paldea < 89)
+                            @elseif ($medals->paldea >= 80 && $medals->paldea < 103)
                                 <div class="card-header gold-medal">
                                 @else
                                     <div class="card-header platinum-medal">
@@ -2111,7 +2111,7 @@
                                 @else
                                     <div class="card-header platinum-medal">
                 @endif
-                <img class="img-fluid" src="{{ asset('assets/images/LiveoftheParty_Platinum.webp') }}"
+                <img class="img-fluid" src="{{ asset('assets/images/LifeOfTheParty_Platinum.webp') }}"
                     alt="Live Party" width="50" height="50">
                 <div class="fw-bold"><span style="margin-left: 2px;">{{ __('Live of the Party') }}</span></div>
             </div>
@@ -2401,7 +2401,8 @@
             </div>
         </div>
         </div>
-        {{-- END CARD --}}        
+        {{-- END CARD --}} 
+
 
         {{-- Wayfarer --}}
         <div class="col d-flex align-items-stretch">

@@ -97,7 +97,7 @@
                             </div>
                             <div class="card-footer py-2 border-0">
                                 <div class="text-center">
-                                    Already have an account? <a href="{{ route('tl50data') }}" class="text-dark">Login</a>
+                                    Already have an account? <a href="{{ route('tl80data') }}" class="text-dark">Login</a>
                                 </div>
                             </div>
                         </div>

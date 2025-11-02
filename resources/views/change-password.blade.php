@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 m-auto">
                     <div class="text-center my-3">
-                        <a href="/tl50data"><img
+                        <a href="/tl80data"><img
                                 src="{{ asset('assets/images/logo_n36bgc.png') }}"
                                 alt="TIMID0x" width="75" height="75"></a>
                     </div>

@@ -10,7 +10,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>{{ Request::getSchemeAndHttpHost() }}/tl50data</loc>
+        <loc>{{ Request::getSchemeAndHttpHost() }}/tl80data</loc>
         <lastmod>{{ Carbon\Carbon::yesterday()->toW3cString()}}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>

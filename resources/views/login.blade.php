@@ -3,7 +3,7 @@
 -->
 @extends('layouts.template-form')
 
-@section('title', 'TL50Data')
+@section('title', 'TL80Data')
 
 @section('script-header')
 
@@ -143,7 +143,7 @@
                                             <div class="card-body p-md-5 mx-md-4">
 
                                                 <h3 class="fs-4 card-title fw-bold mb-3">Welcome back</h3>
-                                                <form action="/tl50data" method="POST" class="needs-validation" novalidate=""
+                                                <form action="/tl80data" method="POST" class="needs-validation" novalidate=""
                                                     autocomplete="off">
                                                     @csrf
                                                     @if (session()->has('alert-success'))
@@ -228,7 +228,7 @@
                                         </div>
                                         <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
                                             <div class="text-black px-3 py-4 p-md-5 mx-md-4">
-                                                <h4 class="fw-bold mb-2">TL50Data</h4>
+                                                <h4 class="fw-bold mb-2">TL80Data</h4>
                                                 <p class="p-2 mb-2">Save your record by month. I know math and
                                                     statistics
                                                     are lazy, but you can't live without them. Alternative to

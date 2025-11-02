@@ -67,6 +67,7 @@
             'route' => route('admin.orders.index'),
             'active' => request()->routeis('admin.orders.*'),
         ],
+
         [
             'header' => 'Usuarios',
         ],
@@ -77,6 +78,10 @@
             'route' => route('admin.users.show'),
             'active' => request()->routeis('admin.users.*'),
         ],
+
+
+
+
     ];
 
 @endphp

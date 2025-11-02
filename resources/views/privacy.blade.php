@@ -1,5 +1,5 @@
 <!--
-### TIMID0x - 20240521
+### TIMID0x - 202405021
 -->
 @extends('layouts.template-form')
 
@@ -157,8 +157,10 @@
                         <li>2023-07-26: Add Language pt-BR</li>
                         <li>2023-08-08: Add Showcase medal</li>   
                         <li>2023-08-18: Add Paldea medal</li>
-                        <li>2024-05-18: Shop store</li>
-                        <li>2024-05-20: Add route medal</li>   
+			<li>2024-05-18: Shop store</li>     
+                        <li>2024-05-20: Add route medal</li>  
+                        <li>2025-08-11: medal Community Member</li>
+                        <li>2025-11-02: fix paldea medal and tl80data</li>
                         <li>New features ... soon :)</li> 
                     </p>
                     

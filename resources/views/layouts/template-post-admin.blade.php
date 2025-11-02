@@ -7,10 +7,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="title" content="TIMID0x: PokemonGO, TL50Data and more">
+    <meta name="title" content="TIMID0x: PokemonGO, TL80Data and more">
     <meta name="description"
-        content="Try TL50Data, records your medals from PokemonGO with advanced stats. PvP Games, Blog, AR photos and more. Follow on social networks as @timid0x">
-    <meta name="keywords" content="timid0x,TL50data,TL40Data,Pokemon,PokemonGO,AR,GOSnapshot,Blog">
+        content="Try TL80Data, records your medals from PokemonGO with advanced stats. PvP Games, Blog, AR photos and more. Follow on social networks as @timid0x">
+    <meta name="keywords" content="timid0x,TL80data,TL40Data,Pokemon,PokemonGO,AR,GOSnapshot,Blog">
     <meta name="wot-verification" content="b163ac58f42ae0b0f594" />
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -92,7 +92,7 @@
                             </li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/tl50data') }}">TL50data</a>
+                                <a class="nav-link" href="{{ url('/tl80data') }}">TL80data</a>
                             </li>
 
                         @endauth

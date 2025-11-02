@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <!--
-### TIMID0x - Mobile Optimized - 2025-06-17
+### TIMID0x - Mobile Optimized - 2025-11-02
 -->
 <html lang="en">
-
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="title" content="TIMID0x: PokemonGO, TL50Data and more">
+    <meta name="title" content="TIMID0x: PokemonGO, TL80Data and more">
     <meta name="description"
-        content="Try TL50Data, track your medals from PokemonGO with advanced stats. PvP Games, Blog, Friend codes, AR photos and more">
-    <meta name="keywords" content="timid0x,TL50data,PokemonGO,AR,GOSnapshot,Blog,FriendCodes">
+        content="Try TL80Data, track your medals from PokemonGO with advanced stats. PvP Games, Blog, Friend codes, AR photos and more">
+    <meta name="keywords" content="timid0x,TL80data,PokemonGO,AR,GOSnapshot,Blog,FriendCodes">
     <meta name="wot-verification" content="b163ac58f42ae0b0f594" />
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <meta name="revisit-after" content="1 days">
     <meta name="author" content="TIMID0x">
 
-    <title>TIMID0x: PokemonGO, TL50Data and more</title>
+    <title>TIMID0x: PokemonGO, TL80Data and more</title>
 
     <!-- Favicon-->
     <link rel="icon" type="image/png" href="{{ asset('assets/images/favicons/favicon.png') }}">
@@ -326,7 +325,7 @@
                             </li>
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/tl50data') }}">TL50data</a>
+                                <a class="nav-link" href="{{ url('/tl80data') }}">TL80data</a>
                             </li>
                         @endauth
                     </ul>
@@ -366,23 +365,23 @@
             <h2 class="section-title text-center mb-4 mb-md-5">Explore Our Features</h2>
 
             <div class="row g-4">
-                <!-- TL50Data -->
+                <!-- TL80Data -->
                 <div class="col-12 col-md-6">
                     <div class="feature-card" data-aos="fade-up">
                         <div class="row align-items-center">
                             <div class="col-12 col-md-5 mb-3 mb-md-0">
-                                <a href="/tl50data">
+                                <a href="/tl80data">
                                     <img class="img-fluid rounded w-100"
                                         src="{{ asset('assets/images/pexels-rdne-7947663.webp') }}"
-                                        alt="TL50Data Dashboard">
+                                        alt="TL80Data Dashboard">
                                 </a>
                             </div>
                             <div class="col-12 col-md-7">
-                                <h3 class="text-white mt-2 mt-md-0">TL50Data</h3>
+                                <h3 class="text-white mt-2 mt-md-0">TL80Data</h3>
                                 <p class="text-white-50">The ultimate platform for dedicated Pokémon GO trainers. Track
                                     your medal progress with advanced analytics, compete on leaderboards, and connect
                                     with friends.</p>
-                                <a href="{{ url('/tl50data') }}" class="btn btn-pokemon">
+                                <a href="{{ url('/tl80data') }}" class="btn btn-pokemon">
                                     Get Started <i class="fa-solid fa-arrow-right ms-2"></i>
                                 </a>
                             </div>
@@ -478,8 +477,8 @@
                 </div>
                 <div class="col-lg-6 order-lg-2 order-1 mb-4 mb-lg-0">
                     <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/WuBFnkVcwUE?si=K6-9jYeC09r6fuKD"
-                            title="YouTube video" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/WuBFnkVcwUE?si=K6-9jYeC09r6fuKD" title="YouTube video"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -499,11 +498,11 @@
                                 height="50" alt="Trainer">
                             <div class="ms-3">
                                 <h5 class="text-white mb-0">FreDHerT</h5>
-                                <small class="text-pokemon-green">Level 43 Trainer</small>
+                                <small class="text-pokemon-green">Level 64 Trainer</small>
                             </div>
                         </div>
-                        <p class="text-white-50">"TL50Data completely transformed how I track my progress. The medal
-                            analytics helped me optimize my gameplay to reach Level 40 faster!"</p>
+                        <p class="text-white-50">"TL80Data completely transformed how I track my progress. The medal
+                            analytics helped me optimize my gameplay to reach Level 80 faster!"</p>
                     </div>
                 </div>
 
@@ -546,7 +545,7 @@
             <h2 class="section-title mb-4">Ready to Level Up Your Game?</h2>
             <p class="text-white-50 lead mb-5">Join thousands of trainers who are already enhancing their Pokémon GO
                 experience with our tools and community.</p>
-            <a href="{{ url('/tl50data') }}" class="btn btn-pokemon btn-lg">
+            <a href="{{ url('/tl80data') }}" class="btn btn-pokemon btn-lg">
                 Start Your Journey Today <i class="fa-solid fa-chevron-right ms-2"></i>
             </a>
         </div>
@@ -597,6 +596,7 @@
             once: true
         });
     </script>
+
 
 </body>
 

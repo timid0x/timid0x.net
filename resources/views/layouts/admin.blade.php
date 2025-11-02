@@ -10,6 +10,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'TIMID0x') }}</title>
+
     <meta name="title" content="TIMID0x: PokemonGO, TL50Data and more">
     <meta name="description"
         content="Try TL50Data, track your medals from PokemonGO with advanced stats. PvP Games, Blog, Friend codes, AR photos and more">
@@ -19,7 +20,6 @@
     <meta name="language" content="English">
     <meta name="revisit-after" content="1 days">
     <meta name="author" content="TIMID0x">
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -77,9 +77,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     @livewireScripts
-
     @stack('js')
 
     @if (session('swal'))
@@ -93,7 +91,6 @@
             Swal.fire(data[0]);
         });
     </script>
-
 
 </body>
 
